@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
                 <input
                   type="hidden"
                   name="redirect"
-                  value="https://web3forms.com/success"
+                  value="/success"
                 />
                 <div>
                   <label htmlFor="name" className="sr-only">

@@ -33,26 +33,48 @@ export const Hero: React.FC = () => {
             {/* Lead Capture Form (ATF) */}
             <div className="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 mt-4 max-w-lg">
               <h3 className="text-xl font-bold text-slate-900 mb-4">Kérjen időpontot most!</h3>
-              <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                className="flex flex-col gap-4"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="ef92aaa0-4aba-4d60-9f04-a789bcea685b"
+                />
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://web3forms.com/success"
+                />
                 <div>
-                  <label htmlFor="name" className="sr-only">Név</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    placeholder="Az Ön Neve" 
+                  <label htmlFor="name" className="sr-only">
+                    Név
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Az Ön Neve"
                     className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none"
+                    required
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="sr-only">Telefonszám</label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    placeholder="Telefonszám (pl. +36 30 ...)" 
+                  <label htmlFor="phone" className="sr-only">
+                    Telefonszám
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Telefonszám (pl. +36 30 ...)"
                     className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-gold-400 focus:border-transparent outline-none"
+                    required
                   />
                 </div>
-                <Button fullWidth>
+                <Button fullWidth type="submit">
                   Kérem az időpontot
                 </Button>
                 

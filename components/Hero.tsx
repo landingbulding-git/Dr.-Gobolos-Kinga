@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
                 <input
                   type="hidden"
                   name="redirect"
-                  value="/success"
+                  value="https://dr-gobolos-kinga.vercel.app/success"
                 />
                 <div>
                   <label htmlFor="name" className="sr-only">
